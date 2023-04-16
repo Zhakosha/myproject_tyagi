@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import GenderSelector from './components/GenderSelector';
+import RunningSurfaceSelector from './components/RunningSurfaceSelector';
+import TrainingIntensitySelector from './components/TrainingIntensitySelector';
+import FootWidthSelector from './components/FootWidthSelector';
+import PronationSelector from './components/PronationSelector';
+import ShoeSelector from './components/ShoeSelector';
+
+import Footer from './components/Footer';
+import BmiCalculator from './components/BmiCalculator';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <ShoeSelector/>
+      <Footer/>
     </div>
   );
 }
