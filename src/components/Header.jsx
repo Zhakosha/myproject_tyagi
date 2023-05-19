@@ -1,11 +1,15 @@
-import photo1 from './images/photo1.png';
+import taygi from './images/tyagi.png';
+import './style.css';
+
 
 
 export default function Header () {
     return (
-        <div className='wrapper'>
-          <h1>Бархатные тяги</h1>
-          <img src={photo1}/>
+        <div className='header'>
+          <img class="background-image" src={taygi}/>
+          <div class="text-overlay">
+             <h1>Бархатные тяги</h1>
+          </div>
         </div>   
     )
 }

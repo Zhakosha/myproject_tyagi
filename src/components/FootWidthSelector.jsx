@@ -1,4 +1,6 @@
+import React from 'react';
 import { useState } from 'react';
+import './style.css';
 
 function FootWidthSelector({ onFootWidthSelected }) {
   const [selectedWidth, setSelectedWidth] = useState(null);
@@ -9,12 +11,11 @@ function FootWidthSelector({ onFootWidthSelected }) {
   };
 
   return (
-    <div>
+    <div className='wrapper'>
       <h2>Выберите ширину стопы:</h2>
-      <div>
-        <button onClick={() => handleWidthClick('narrow')}>Узкая</button>
-        <button onClick={() => handleWidthClick('normal')}>Нормальная</button>
-        <button onClick={() => handleWidthClick('wide')}>Широкая</button>
+      <div className='wrapper2'>
+        <button className={`button ${selectedWidth === 'normal' ? 'selected' : ''}`} onClick={() => handleWidthClick('normal')}>Нормальная</button>
+        <button className={`button ${selectedWidth === 'wide' ? 'selected' : ''}`} onClick={() => handleWidthClick('wide')}>Широкая</button>
       </div>
     </div>
   );

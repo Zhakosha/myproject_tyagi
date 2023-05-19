@@ -2,8 +2,11 @@
 
 # dependencies
 /node_modules
+/draft_files
 /.pnp
 .pnp.js
+node_modules/
+draft_files/
 
 # testing
 /coverage

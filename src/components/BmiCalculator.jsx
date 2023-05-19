@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import './style.css';
 
-export default function BmiCalculator() {
+
+export default function BmiCalculator({ gender, onBmiSelected }) {
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
   const [bmi, setBmi] = useState(null);
@@ -18,24 +20,25 @@ export default function BmiCalculator() {
       alert('Введите вес и рост');
       return;
     }
-    const bmi = weight / ((height / 100) ** 2);
-    setBmi(bmi.toFixed(2));
-    localStorage.setItem('bmi', bmi.toFixed(2));
+    const bmiValue = weight / ((height / 100) ** 2);
+      setBmi(bmiValue.toFixed(2));
+      localStorage.setItem('bmi', bmiValue.toFixed(2));
+      onBmiSelected(bmiValue.toFixed(2));
   };
 
   return (
-    <div>
+    <div className='wrapper'>
       <h2>Введите свой вес и рост:</h2>
       <div>
         <label>Вес (кг):</label>
-        <input type="number" value={weight} onChange={handleWeightChange} />
+        <input className='form' type="number" value={weight} onChange={handleWeightChange} />
       </div>
       <div>
         <label>Рост (см):</label>
-        <input type="number" value={height} onChange={handleHeightChange} />
+        <input className='form' type="number" value={height} onChange={handleHeightChange} />
       </div>
       <div>
-        <button onClick={calculateBmi}>Рассчитать ИМТ</button>
+        <button className='button' onClick={calculateBmi}>Рассчитать ИМТ</button>
       </div>
       {bmi && <p>Ваш ИМТ: {bmi}</p>}
     </div>
