@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import male from './images/male.png';
-import female from './images/female.png';
+import male from './images/male1.png';
+import female from './images/female1.png';
 import './style.css'
 
 
@@ -17,14 +17,15 @@ function GenderSelector ({ onGenderSelected }) {
   return (
     <div className='wrapper1'>
       <h2 class='title'>Выберите свой пол:</h2>
-      <div className='gender_img' >
-        <img
+      <div className='genderImg' >
+        <img className='img'
           src= {male}
           alt="Мужской пол"
           onClick={() => handleGenderClick('male')}
           style={{ cursor: 'pointer', border: selectedGender === 'male' ? '2px solid blue' : 'none' }}
         />
-        <img
+        
+        <img className='img'
           src={female}
           alt="Женский пол"
           onClick={() => handleGenderClick('female')}

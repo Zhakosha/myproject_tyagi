@@ -8,7 +8,10 @@ export default function Header () {
         <div className='header'>
           <img class="background-image" src={taygi}/>
           <div class="text-overlay">
-             <h1>Бархатные тяги</h1>
+             <h1>SneakerMate</h1>
+          </div>
+          <div class="text2-overlay">
+             <h3>aka Бархатные тяги</h3>
           </div>
         </div>   
     )

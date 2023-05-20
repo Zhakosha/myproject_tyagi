@@ -55,11 +55,11 @@ const selectShoeModel = () => {
     footWidth === 'normal' &&
     bmi < 25) {
       if (footPronation === 'normal' || footPronation === 'hypopronation' ) {
-        model = 'Asics DYNOBLAST 3'; image = require ('./model1.webp');
+        model = 'Asics DYNOBLAST 3'; image = require ('./model1.png');
       }
 
       else {
-        model = 'Asics GEL KAYANO 29'; image = require ('./model2.webp');
+        model = 'Asics GEL KAYANO 29'; image = require ('./model2.png');
       }
       
       }
@@ -67,10 +67,10 @@ const selectShoeModel = () => {
       (gender === 'male' &&
       footWidth === 'normal') {
         if (footPronation === 'normal' || footPronation === 'hypopronation' ) {
-          model = 'Asics  GEL CUMULUS 25'; image = require ('./model3.webp');
+          model = 'Asics  GEL CUMULUS 25'; image = require ('./model3.png');
         }
         else {
-          model = 'Asics MetaRun'; image = require ('./model4.webp');
+          model = 'Asics MetaRun'; image = require ('./model4.png');
         }
       }
     
@@ -91,11 +91,11 @@ const selectShoeModel = () => {
       footWidth === 'normal' &&
       bmi < 25) {
         if (footPronation === 'normal' || footPronation === 'hypopronation' ) {
-           image = require ('./model1.webp'); image = require ('./model7.webp');
+           model = 'Asics DYNOBLAST 3'; image = require ('./model7.png');
         }
         
         else {
-          model = 'Asics GT 2000 11'; image = require ('./model8.webp');
+          model = 'Asics GT 2000 11'; image = require ('./model8.png');
         }
         
       }
@@ -103,11 +103,11 @@ const selectShoeModel = () => {
       (gender === 'female' &&
       footWidth === 'normal') {
         if (footPronation === 'normal' || footPronation === 'hypopronation' ) {
-          model = 'Asics  GEL CUMULUS 25'; image = require ('./model9.webp');
+          model = 'Asics  GEL CUMULUS 25'; image = require ('./model9.png');
         }
         
         else {
-          model = 'Asics MetaRun'; image = require ('./model10.webp');
+          model = 'Asics MetaRun'; image = require ('./model10.png');
         }
         
       } 
